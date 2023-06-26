@@ -1,0 +1,120 @@
+#dice-container {
+  display: flex;
+  /*! width: 100vw; */
+  justify-content: space-evenly;
+}
+
+.dice {
+  /*! height: 18vw; */
+  /*! width: 18vw; */
+  /*! font-size: 10vw; */
+}
+
+.dice.hold {
+  background-color: hsl(230, 34%, 28%);
+  color:hsl(55, 71%, 35%);
+}
+
+.die {
+  display: flex;
+  flex-wrap: wrap;
+  /*! width: 200px; */
+  /*! height: 200px; */
+  /*! border: 2px solid black; */
+  /*! box-sizing: border-box; */
+}
+
+.side {
+  /*! width: 33.33%; */
+  /*! height: 33.33%; */
+  /*! display: none; */
+  /* width: 15vw; */
+  /* height: 15vw; */
+  /*! background-color: #b4c2b7; */
+  padding: clamp(0rem, -0.6818rem + 4.3636vw, 1.5rem);
+}
+
+.dot {
+  width: clamp(0.4375rem, -0.0579rem + 3.1707vw, 1.25rem);
+  height: clamp(0.4375rem, -0.0579rem + 3.1707vw, 1.25rem);
+  background-color: white;
+  border-radius: 50%;
+  margin: 2px;
+}
+
+.side-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.side-2>.dot:nth-child(1) {
+  align-self: end;
+}
+
+.side-2>.dot:nth-child(2) {
+  align-self: start;
+}
+
+.side-3 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.side-3>.dot:nth-child(1) {
+  align-self: end;
+}
+
+.side-3>.dot:nth-child(3) {
+  align-self: start;
+}
+
+.side-4 {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  flex-direction: column;
+}
+.side-4 > .row {
+  justify-content: space-between;
+}
+
+.side-5 {
+  display: flex;
+  justify-content: space-evenly;
+  /*! align-items: center; */
+  flex-direction: column;
+  /*! row-gap: 1em; */
+}
+.side-5 > .row:nth-child(1),
+.side-5 > .row:nth-child(3) {
+  justify-content: space-between;
+}
+
+.side-6 {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  flex-direction: column;
+  width: fit-content;
+}
+
+/* Styles for mobile devices */
+@media only screen and (max-width: 767px) {
+  /* Mobile-specific styles here */
+}
+
+/* Styles for desktop devices */
+@media only screen and (min-width: 768px) {
+
+  /* Desktop-specific styles here */
+}

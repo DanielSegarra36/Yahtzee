@@ -1,0 +1,75 @@
+/* Hamburger menu styles */
+.hamburger {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 9999;
+  cursor: pointer;
+  /*! color: white; */
+  scale: 2;
+  transition: all ease-in 2s;
+}
+
+.hamburger span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  margin-bottom: 5px;
+  background-color: rgb(253, 191, 45);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Reload button styles */
+.menu {
+  display: none;
+}
+.reload-button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  padding: 20px;
+  background-color: rgb(253, 191, 45);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: black;
+  font-size: xx-large;
+  transition: all ease-in 2s;
+}
+
+/* Styles for mobile devices */
+@media only screen and (max-width: 769px) {
+  /* Mobile-specific styles here */
+}
+
+/* Styles for desktop devices */
+@media only screen and (min-width: 770px) {
+
+  /* Desktop-specific styles here */
+  .hamburger {
+    top: 20px;
+    left: 20px;
+    scale: 1;
+    transition: all ease-in 2s;
+  }
+
+  .reload-button {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: normal;
+    transition: all ease-in 2s;
+  }
+}
