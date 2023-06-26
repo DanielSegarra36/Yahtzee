@@ -1,0 +1,15 @@
+{
+  "name": "Yahtzee",
+  "short_name": "Yahtzee",
+  "icons": [
+    {
+      "src": "logoBranding.png",
+      "sizes": "250x250",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000"
+}
