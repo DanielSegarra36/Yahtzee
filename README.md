@@ -1,2 +1,4 @@
 # Yahtzee
-Is it lawsuit material? IDK I just love yahtzee
+
+![Yahtzee Logo](/assets/Yahtzee.png "Yahtzee Logo")
+
