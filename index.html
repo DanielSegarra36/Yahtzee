@@ -7,32 +7,12 @@
   <link href="styles/hamburgerMenu.css" rel="stylesheet">
   <link href="styles/style.css" rel="stylesheet"> -->
   <link href="styles/verticalLayout.css" rel="stylesheet">
-  
+
   <meta name="color-scheme" content="dark light">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
   <link rel="icon" type="image/png" href="logoBranding.png" sizes="192x192">
   <link rel="manifest" href="manifest.json">
-  <style>
-     #new-game-button {
-    margin-top: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#new-game-button:hover {
-    background-color: #0069d9;
-}
-    .controls {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      font-size: 2rem;
-    }
-  </style>
-  
 </head>
 
 <body>
@@ -102,16 +82,16 @@
       <div id="total-score">Total Score: 0</div>
     </div>
 
-<div class="controls">
-   <button id="roll-button" onclick="rollDice()">Roll Dice</button>
+    <div class="controls">
+      <button id="roll-button" onclick="rollDice()">Roll Dice</button>
 
-    <button id="new-game-button" onclick="newGame()">New Game</button>
-    <!-- <button id="end-turn-button" onclick="endTurn()">End Turn</button> -->
-</div>
-    
+      <button id="new-game-button" onclick="newGame()">New Game</button>
+      <!-- <button id="end-turn-button" onclick="endTurn()">End Turn</button> -->
+    </div>
+
     <div class="menu">
       <button class="reload-button" onclick="reloadPage()">Update App</button>
-      
+
     </div>
   </main>
   <script src="script.js"></script>

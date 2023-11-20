@@ -6,7 +6,7 @@
   z-index: 9999;
   cursor: pointer;
   /*! color: white; */
-  scale: 2;
+  /*! scale: 2; */
   transition: all ease-in 2s;
 }
 
@@ -35,6 +35,7 @@
 .menu {
   display: none;
 }
+
 .reload-button {
   position: fixed;
   bottom: 40px;
@@ -45,7 +46,7 @@
   border-radius: 4px;
   cursor: pointer;
   color: black;
-  font-size: xx-large;
+  /*! font-size: clamp(1rem, -0.3333rem + 10.6667vw, 5rem); */
   transition: all ease-in 2s;
 }
 
@@ -69,7 +70,7 @@
     bottom: 20px;
     right: 20px;
     padding: 10px;
-    font-size: normal;
+    /*! font-size: clamp(1rem, -0.3333rem + 10.6667vw, 5rem); */
     transition: all ease-in 2s;
   }
 }
@@ -79,7 +80,9 @@
 /********************************/
 /********************************/
 /********************************/
-
+html {
+  height: 100%;
+}
 
 body {
   margin: 0;
@@ -88,9 +91,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   /*! width: 100vw; */
-  font-size: 3rem;
+  /*! font-size: clamp(1rem, -0.3333rem + 10.6667vw, 5rem); */
 }
 
 header {
@@ -106,9 +109,10 @@ header>h1 {
 }
 
 #logo {
-  min-width: 250px;
+  /*! min-width: 250px; */
   width: 250px;
   height: fit-content;
+  max-width: 100%;
 }
 
 main {
@@ -136,21 +140,26 @@ button:hover {
 #upper-section {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  justify-content: center;
 }
 
 #lower-section {
   display: flex;
-  /*! width: 100vw; */
+  /*! width: 100%; */
   justify-content: space-between;
   flex-direction: column;
 }
 
 #lower-section>button {
   /* font-size: 3vw; */
-  width: 10vw;
+  /* width: 10vw; */
+  width: 100%;
+  min-width: fit-content;
   max-width: 350px;
-  height: 10vw;
-  font-size: 1.5rem;
+  min-height: fit-content;
+  /*! height: 10vw; */
+  /*! font-size: clamp(1rem, 0rem + 2.6667vw, 2rem); */
 }
 
 .side.scored>.dot {
@@ -171,7 +180,7 @@ button:hover {
 #roll-button {
   /*! width: 20vw; */
   /*! height: 8vw; */
-  font-size: xx-large;
+  /* font-size: clamp(1rem, -0.3333rem + 10.6667vw, 5rem); */
 }
 
 .row {
@@ -185,7 +194,7 @@ button:hover {
   padding: 2rem 0;
   justify-content: space-around;
   width: 100vw;
-  font-size: 3rem;
+  font-size: clamp(1rem, 0.6667rem + 2.6667vw, 2rem);
 }
 
 /* Styles for mobile devices */
@@ -214,20 +223,21 @@ button:hover {
 
 #dice-container {
   display: flex;
-  width: 90vw;
+  width: 90%;
   justify-content: center;
+  gap: .5rem;
 }
 
 .dice {
-  height: 10rem;
-  width: 10rem;
-  font-size: 5rem;
-  margin: .5rem;
+  /*! height: clamp(2rem, -0.6667rem + 18.3333vw, 10rem); */
+  /*! width: clamp(2rem, -0.6667rem + 18.3333vw, 10rem); */
+  /*! font-size: clamp(1rem, -0.3333rem + 10.6667vw, 5rem); */
+  /*! margin: .5rem; */
 }
 
 .dice.hold {
   background-color: hsl(230, 34%, 28%);
-  color:hsl(55, 71%, 35%);
+  color: hsl(55, 71%, 35%);
 }
 
 .die {
@@ -246,12 +256,14 @@ button:hover {
   /* width: 15vw; */
   /* height: 15vw; */
   /*! background-color: #b4c2b7; */
-  padding: clamp(0rem, -0.6818rem + 4.3636vw, 1.5rem);
+  /* padding: clamp(0rem, -0.6818rem + 4.3636vw, 1.5rem); */
+  height: 16.6%;
+  /*! width: 200px; */
 }
 
 .dot {
-  width: clamp(0.4375rem, -0.0579rem + 3.1707vw, 1.25rem);
-  height: clamp(0.4375rem, -0.0579rem + 3.1707vw, 1.25rem);
+  width: clamp(0.1rem, -0.2rem + 2.4vw, 1rem);
+  height: clamp(0.1rem, -0.2rem + 2.4vw, 1rem);
   background-color: white;
   border-radius: 50%;
   margin: 2px;
@@ -299,7 +311,8 @@ button:hover {
   /* align-items: center; */
   flex-direction: column;
 }
-.side-4 > .row {
+
+.side-4>.row {
   justify-content: space-between;
 }
 
@@ -310,8 +323,9 @@ button:hover {
   flex-direction: column;
   /*! row-gap: 1em; */
 }
-.side-5 > .row:nth-child(1),
-.side-5 > .row:nth-child(3) {
+
+.side-5>.row:nth-child(1),
+.side-5>.row:nth-child(3) {
   justify-content: space-between;
 }
 
@@ -332,4 +346,25 @@ button:hover {
 @media only screen and (min-width: 768px) {
 
   /* Desktop-specific styles here */
+}
+
+#new-game-button {
+  /* margin-top: 10px; */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  /* padding: 10px 20px; */
+  /* font-size: 16px; */
+  cursor: pointer;
+}
+
+#new-game-button:hover {
+  background-color: #0069d9;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 2rem;
 }
